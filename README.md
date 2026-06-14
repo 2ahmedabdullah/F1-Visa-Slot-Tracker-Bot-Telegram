@@ -123,7 +123,7 @@ Spawns parallel incognito web browser clients pointing directly to the US Visa S
 └───────────────────┘└───────────────────┘
 ```
 
-## 📱 Alarm (Mobile Screenshots)
+## 📱 Personalised Alert to Telegram Chat (Mobile Screenshots)
 
 Below are mobile screenshots demonstrating the pipeline in action. When a high-priority consensus is verified by the Stage 2 model, the system immediately pushes alerts directly to the personal Telegram Bot with instant access links.
 
