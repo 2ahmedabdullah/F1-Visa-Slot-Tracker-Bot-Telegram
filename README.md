@@ -123,6 +123,13 @@ Spawns parallel incognito web browser clients pointing directly to the US Visa S
 │       Unit        ││      TG Bot       │
 │(Windows Beep loop)││(Pushes Ident-Link)│
 └───────────────────┘└───────────────────┘
+```
+
+## 📸 Alarm (Mobile Screenshots)
+
+Below are mobile screenshots demonstrating the pipeline in action. When a high-priority consensus is verified by the Stage 2 model, the system immediately pushes alerts directly to the personal Telegram Bot with instant access links.
+
+![Alarm](img5.png)
 
 ## 🏎️ Running the Script
 Ensure your coordinate variables (TARGET_X, TARGET_Y) match the physical position of the intended button layouts on your local display.
