@@ -9,6 +9,15 @@ Below are mobile screenshots demonstrating the pipeline in action. When a high-p
 
 ![Alarm](img5.png)
 
+
+## 📸 Live Tracking (Laptop Terminal Screenshots)
+
+Below are the terminal logs showing real-time console telemetry as the pipeline ingests, triages, buffers, and triggers alerts on incoming telegram data packets.
+
+![Live Tracking](terminal0.png)
+
+![Live Tracking](terminal1.png)
+
 ## 🛡️ The Claim
 ⚡Latency: The entire pipeline executes in under 60 seconds; when a slot alert occurs, it undergoes a rapid 2-step verification process to eliminate false alarms before triggering.
 
@@ -157,15 +166,6 @@ Bash
 ```
 python app.py
 ```
-
-## 📸 Live Tracking (Laptop Terminal Screenshots)
-
-Below are the terminal logs showing real-time console telemetry as the pipeline ingests, triages, buffers, and triggers alerts on incoming telegram data packets.
-
-![Live Tracking](terminal0.png)
-
-![Live Tracking](terminal1.png)
-
 
 ## 🧪 Testing Environment
 The framework includes simulated testing workers (manual_test_worker1, manual_test_worker2, etc.) mimicking authentic community interactions (e.g., false alarms, genuine chaos, or group panic). To safely stress-test your system pipelines without relying on active telegram drops, uncomment your target worker function inside the main() block initialization process.
