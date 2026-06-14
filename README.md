@@ -1,4 +1,4 @@
-# US Visa F1 Slot Tracker & Intelligent Automation Engine
+# Realtime US Visa F1 Slot Tracker & Intelligent Automation Engine (Latency under 60 seconds)
 An advanced, asynchronous Python-based monitoring utility designed to track US F1 Visa slot availability across crowded Telegram communities. It mitigates false alarms by leveraging a two-stage evaluation pipeline powered by Llama-3.3-70b (via Groq) and takes immediate action through automated browser launchers, human-like hardware macro interactions, localized audio warnings, and instant Telegram alert forwards.
 
 ## 🚀 Key Features
