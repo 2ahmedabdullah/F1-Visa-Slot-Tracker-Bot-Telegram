@@ -3,6 +3,12 @@
 Asynchronous Python-based monitoring tool that listens to Telegram groups for messages related to US F1 visa slot availability.
 It uses rule-based filtering and an optional LLM-based classification step (via Groq-hosted models) to help reduce irrelevant alerts. When a potential match is detected, the system sends notifications through a Telegram bot and can optionally trigger a local audio alert.
 
+## 📱 Personalised Alert to Telegram Chat (Mobile Screenshots)
+
+Below are mobile screenshots demonstrating the pipeline in action. When a high-priority consensus is verified by the Stage 2 model, the system immediately pushes alerts directly to the personal Telegram Bot with instant access links.
+
+![Alarm](img5.png)
+
 ## 🛡️ The Claim
 ⚡Latency: The entire pipeline executes in under 60 seconds; when a slot alert occurs, it undergoes a rapid 2-step verification process to eliminate false alarms before triggering.
 
@@ -142,12 +148,6 @@ Plays a loud, distinct looping beep alarm directly on your computer speakers.
 │(Windows Beep loop)││(Pushes Ident-Link)│
 └───────────────────┘└───────────────────┘
 ```
-
-## 📱 Personalised Alert to Telegram Chat (Mobile Screenshots)
-
-Below are mobile screenshots demonstrating the pipeline in action. When a high-priority consensus is verified by the Stage 2 model, the system immediately pushes alerts directly to the personal Telegram Bot with instant access links.
-
-![Alarm](img5.png)
 
 ## 🏎️ Running the Script
 
