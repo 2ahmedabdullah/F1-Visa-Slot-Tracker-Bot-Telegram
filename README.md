@@ -2,6 +2,8 @@
 An advanced, asynchronous Python-based monitoring utility designed to track US F1 Visa slot availability across crowded Telegram communities. It mitigates false alarms by leveraging a two-stage evaluation pipeline powered by Llama-3.3-70b (via Groq) and takes immediate action through localized audio warnings and instant Telegram alert forwards.
 
 ## 🛡️ The Claim
+⚡Latency: The entire pipeline executes in under 60 seconds; when a slot alert occurs, it undergoes a rapid 2-step verification process to eliminate false alarms before triggering.
+
 💰 Zero Fee: Leverages an ultra-low-cost (virtually $0) infrastructure utilizing Groq's high-speed API endpoints to process thousands of community interactions daily without premium SaaS subscription fees.
 
 🕞 24x7: Engineered specifically to tackle sudden, high-stakes bulk drops that notoriously occur in the dead of night (2 AM, 3 AM, or later), this system acts as your tireless digital sentinel. 
