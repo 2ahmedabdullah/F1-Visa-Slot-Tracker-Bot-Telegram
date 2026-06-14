@@ -1,5 +1,5 @@
 # Realtime US Visa F1 Slot Tracker & Intelligent Automation Engine (Latency under 60 seconds)
-An advanced, asynchronous Python-based monitoring utility designed to track US F1 Visa slot availability across crowded Telegram communities. It mitigates false alarms by leveraging a two-stage evaluation pipeline powered by Llama-3.3-70b (via Groq) and takes immediate action through automated browser launchers, human-like hardware macro interactions, localized audio warnings, and instant Telegram alert forwards.
+An advanced, asynchronous Python-based monitoring utility designed to track US F1 Visa slot availability across crowded Telegram communities. It mitigates false alarms by leveraging a two-stage evaluation pipeline powered by Llama-3.3-70b (via Groq) and takes immediate action through localized audio warnings and instant Telegram alert forwards.
 
 ## 🚀 Key Features
 Real-time Stream Monitoring: Tracks active message feeds from target Telegram communities concurrently using Telethon.
@@ -9,8 +9,6 @@ Two-Stage AI Validation (Groq Engine): * Stage 1 (Fast Triage): Instantly screen
 Stage 2 (Context Verification): Opens a localized 30-second window to amass surrounding chat behavior and uses the LLM to run semantic, consensus-driven analyses to distinguish actual drops from false alarms or historical talk.
 
 60-Second Target Latency Logic: The script acts as an optimized, local listener running on a dedicated machine. Within a 60-second window from a true group alert, it parses the threat, pushes clean notifications, and locks down UI automated portals.
-
-Humanized UI Macro Engine: Utilizes Cubic Bézier curve logic combined with micro-jitters, organic wiggles, and randomized micro-delays to interact via PyAutoGUI without triggering bot protection systems.
 
 Dynamic Content Filtering: Integrated system blocks common spam, query phrases, lookback indicators, and forward strings using custom regular expressions.
 
@@ -77,8 +75,6 @@ Action Suite: If verified as authentic, the program activates an asynchronous se
 Dispatches a dedicated Telegram notification alert down to your personal chat interface, calling out the active connected listener account.
 
 Plays a loud, distinct looping beep alarm directly on your computer speakers.
-
-Spawns parallel incognito web browser clients pointing directly to the US Visa Scheduling portal and drives native coordinate mouse-clicks via humanized pathing algorithms.
 
 
 
