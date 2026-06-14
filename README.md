@@ -14,6 +14,15 @@ Humanized UI Macro Engine: Utilizes Cubic Bézier curve logic combined with micr
 
 Dynamic Content Filtering: Integrated system blocks common spam, query phrases, lookback indicators, and forward strings using custom regular expressions.
 
+## 🚨 Dual-Channel Alert Output
+
+Once a targeted event is officially confirmed by Stage 2, the system executes two parallel alert vectors:
+
+📢 Local Hardware Sound Horn Alert: Triggers a persistent, high-frequency Windows audio beep loop (winsound) directly on the host laptop hardware unit to ensure immediate physical awareness.
+
+🔊 Remote Notification Bot: Dispatches an instant alert through a personalized Telegram Bot, delivering a direct identity-link to the target conversation.
+
+
 ## 🛠️ Project Structure & Prerequisites
 This application is built exclusively for Windows due to its deep integration with winsound and native desktop process triggers (chrome.exe, msedge.exe).
 
@@ -137,14 +146,6 @@ Below are the terminal logs showing real-time console telemetry as the pipeline 
 
 ![Live Tracking](terminal1.png)
 
-
-## 📢 Dual-Channel Alert Output
-
-Once a targeted event is officially confirmed by Stage 2, the system executes two parallel alert vectors:
-
-🔊 Local Hardware Sound Horn Alert: Triggers a persistent, high-frequency Windows audio beep loop (winsound) directly on the host laptop hardware unit to ensure immediate physical awareness.
-
-🔊 Remote Notification Bot: Dispatches an instant alert through a personalized Telegram Bot, delivering a direct identity-link to the target conversation.
 
 ## 🧪 Testing Environment
 The framework includes simulated testing workers (manual_test_worker1, manual_test_worker2, etc.) mimicking authentic community interactions (e.g., false alarms, genuine chaos, or group panic). To safely stress-test your system pipelines without relying on active telegram drops, uncomment your target worker function inside the main() block initialization process.
