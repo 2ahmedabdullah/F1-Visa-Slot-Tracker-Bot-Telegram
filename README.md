@@ -5,7 +5,7 @@ It uses rule-based filtering and an optional LLM-based classification step (via 
 
 ## 📱 Personalised Alert to Telegram Chat (Mobile Screenshots)
 
-Below are mobile screenshots demonstrating the pipeline in action. When a high-priority consensus is verified by the Stage 2 model, the system immediately pushes alerts directly to the personal Telegram Bot with instant access links.
+Below are mobile screenshots demonstrating the pipeline in action. When a high-priority consensus is verified by the Stage 2 model, the system immediately pushes alerts directly to the personal Telegram Bot.
 
 ![Alarm](img5.png)
 
