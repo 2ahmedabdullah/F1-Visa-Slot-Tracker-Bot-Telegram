@@ -1,26 +1,40 @@
-# Realtime US Visa F1 Slot Tracker & Intelligent Automation Engine (Latency under 60 seconds)
-An advanced, asynchronous Python-based monitoring utility designed to track US F1 Visa slot availability across crowded Telegram communities. It mitigates false alarms by leveraging a two-stage evaluation pipeline powered by Llama-3.3-70b (via Groq) and takes immediate action through localized audio warnings and instant Telegram alert forwards.
+# Realtime US Visa F1 Slot Tracker - Telegram (Latency under 60 seconds)
+
+Asynchronous Python-based monitoring tool that listens to Telegram groups for messages related to US F1 visa slot availability.
+It uses rule-based filtering and an optional LLM-based classification step (via Groq-hosted models) to help reduce irrelevant alerts. When a potential match is detected, the system sends notifications through a Telegram bot and can optionally trigger a local audio alert.
 
 ## 🛡️ The Claim
 ⚡Latency: The entire pipeline executes in under 60 seconds; when a slot alert occurs, it undergoes a rapid 2-step verification process to eliminate false alarms before triggering.
 
-💰 Zero Fee: Leverages an ultra-low-cost (virtually $0) infrastructure utilizing Groq's high-speed API endpoints to process thousands of community interactions daily without premium SaaS subscription fees.
+💰 Low Fee: Leverages an ultra-low-cost infrastructure utilizing Groq's high-speed API endpoints to process thousands of community interactions daily without premium SaaS subscription fees.
 
 🕞 24x7: Engineered specifically to tackle sudden, high-stakes bulk drops that notoriously occur in the dead of night (2 AM, 3 AM, or later), this system acts as your tireless digital sentinel. 
 
-🌐 Cross Channel: Architected with a modular ingestion layer. The Telethon backend can be scaled instantly to monitor 50+ localized immigration channels, discord servers, or community feeds concurrently without degrading triage performance.
+🌐 Cross Channel: Architected with a modular ingestion layer. The Telethon backend can be scaled instantly to monitor 5+ localized immigration channels, discord servers, or community feeds concurrently without degrading triage performance.
 
 
 ## 🚀 Key Features
-Real-time Stream Monitoring: Tracks active message feeds from target Telegram communities concurrently using Telethon.
+Listens to multiple Telegram groups using Telethon and processes incoming messages asynchronously.
 
-Two-Stage AI Validation (Groq Engine): * Stage 1 (Fast Triage): Instantly screens incoming alerts for potential drop occurrences.
+**Real-time Telegram Monitoring**  
+Listens to multiple Telegram groups using Telethon and processes incoming messages asynchronously.
 
-Stage 2 (Context Verification): Opens a localized 30-second window to amass surrounding chat behavior and uses the LLM to run semantic, consensus-driven analyses to distinguish actual drops from false alarms or historical talk.
+**Two-stage filtering pipeline**
 
-60-Second Target Latency Logic: The script acts as an optimized, local listener running on a dedicated machine. Within a 60-second window from a true group alert, it parses the threat, pushes clean notifications, and locks down UI automated portals.
+- **Regex: Rule-based filtering (regex + keywords)**  
+  Incoming messages are first evaluated using predefined regex and keyword rules.  
+  This stage removes a large portion of irrelevant or noisy messages (e.g., spam, generic chat, non-visa discussions).
 
-Dynamic Content Filtering: Integrated system blocks common spam, query phrases, lookback indicators, and forward strings using custom regular expressions.
+- **Stage 1: LLM-based contextual evaluation (Groq API)**  
+  Messages that match Rule based triggers are forwarded to an LLM for classification.  
+  The model evaluates whether the message likely indicates a real visa slot-related event.
+
+- **Stage 2: Context buffering window (30 seconds)**  
+   When Stage 1 is triggered, the system collects additional messages from the same chat over a short time window (e.g., ~30 seconds). This context is included in the LLM prompt to improve classification accuracy.
+
+**Noise reduction design**  
+The combination of rule-based filtering and LLM evaluation is designed to reduce false positives while keeping detection latency low.
+
 
 ## 🚨 Dual-Channel Alert Output
 
