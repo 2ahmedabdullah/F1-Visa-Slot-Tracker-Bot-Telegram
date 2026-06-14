@@ -80,43 +80,32 @@ Spawns parallel incognito web browser clients pointing directly to the US Visa S
 │     Target Telegram Feeds    │
 │  (Group Chat A /Group Chat B)│
 └──────────────┬───────────────┘
-               │
       [New Message Inflow]
-               │
                ▼
 ┌──────────────────────────────┐
 │     Regex Filtering Pass     │
 │(Drops Spam & Historical Talk)│
 └──────────────┬───────────────┘
-               │
         [Pattern Match]
-               │
                ▼
 ┌──────────────────────────────┐
 │      Grok LLM: Stage 1       │
 │        (Fast Triage)         │
 └──────────────┬───────────────┘
-               │
           [Result: YES]
-               │
                ▼
 ┌──────────────────────────────┐
 │    30-Second Context Window  │
 │  (Amasses Live Group Chat)   │
 └──────────────┬───────────────┘
-               │
        [Window Concludes]
-               │
                ▼
 ┌──────────────────────────────┐
 │      Grok LLM: Stage 2       │
 │    (Consensus Evaluation)    │
 └──────────────┬───────────────┘
-               │
         [Drop Confirmed]
-               │
      ┌─────────┴─────────┐
-     │                   │
      ▼                   ▼
 ┌───────────────────┐┌───────────────────┐
 │  Laptop Hardware  ││   User Personal   │
@@ -125,20 +114,37 @@ Spawns parallel incognito web browser clients pointing directly to the US Visa S
 └───────────────────┘└───────────────────┘
 ```
 
-## 📸 Alarm (Mobile Screenshots)
+## 📱 Alarm (Mobile Screenshots)
 
 Below are mobile screenshots demonstrating the pipeline in action. When a high-priority consensus is verified by the Stage 2 model, the system immediately pushes alerts directly to the personal Telegram Bot with instant access links.
 
 ![Alarm](img5.png)
 
 ## 🏎️ Running the Script
-Ensure your coordinate variables (TARGET_X, TARGET_Y) match the physical position of the intended button layouts on your local display.
 
 Execute the system by running the primary application script:
 
 Bash
+```
 python app.py
-⚠️ First Run Note: On your initial startup, the execution terminal will prompt you to type your phone number and official Telegram OTP authentication code directly inside the console window to spawn your persistent session file (f1_tracker_session.session).
+```
+
+## 📸 Live Tracking (Laptop Terminal Screenshots)
+
+Below are the terminal logs showing real-time console telemetry as the pipeline ingests, triages, buffers, and triggers alerts on incoming telegram data packets.
+
+![Live Tracking](terminal0.png)
+
+![Live Tracking](terminal1.png)
+
+
+## 📢 Dual-Channel Alert Output
+
+Once a targeted event is officially confirmed by Stage 2, the system executes two parallel alert vectors:
+
+🔊 Local Hardware Sound Horn Alert: Triggers a persistent, high-frequency Windows audio beep loop (winsound) directly on the host laptop hardware unit to ensure immediate physical awareness.
+
+🔊 Remote Notification Bot: Dispatches an instant alert through a personalized Telegram Bot, delivering a direct identity-link to the target conversation.
 
 ## 🧪 Testing Environment
 The framework includes simulated testing workers (manual_test_worker1, manual_test_worker2, etc.) mimicking authentic community interactions (e.g., false alarms, genuine chaos, or group panic). To safely stress-test your system pipelines without relying on active telegram drops, uncomment your target worker function inside the main() block initialization process.
