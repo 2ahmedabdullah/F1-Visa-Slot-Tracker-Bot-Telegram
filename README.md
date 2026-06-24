@@ -23,7 +23,7 @@ Below are the terminal logs showing real-time console telemetry as the pipeline 
 
 💰 Low Fee: Leverages an ultra-low-cost infrastructure utilizing Groq's high-speed API endpoints to process thousands of community interactions daily without premium SaaS subscription fees.
 
-🕞 24x7: Engineered specifically to tackle sudden, high-stakes bulk drops that notoriously occur in the dead of night (2 AM, 3 AM, or later), this system acts as your tireless digital sentinel. 
+🕞 24x7: Engineered specifically to tackle sudden, high-stakes bulk drops that notoriously occur in the dead of night (2 AM, 3 AM, or later), this system acts as the tireless digital sentinel. 
 
 🌐 Cross Channel: Architected with a modular ingestion layer. The Telethon backend can be scaled instantly to monitor 5+ localized immigration channels, discord servers, or community feeds concurrently without degrading triage performance.
 
@@ -64,7 +64,7 @@ Once a targeted event is officially confirmed by Stage 2, the system executes tw
 This application is built exclusively for Windows due to its deep integration with winsound and native desktop process triggers (chrome.exe, msedge.exe).
 
 Installation
-Clone or download this project directory to your local Windows machine.
+Clone or download this project directory to the local Windows machine.
 
 Install all required upstream dependencies using the project's requirements file:
 
@@ -74,7 +74,7 @@ pip install -r requirements.txt
 ```
 
 Keyword Configuration File (config.json)
-Create a config.json file in your root folder to store regular expression filters. If this file is missing, internal defaults will be used:
+Create a config.json file in the root folder to store regular expression filters. If this file is missing, internal defaults will be used:
 
 JSON
 ```
@@ -87,9 +87,9 @@ JSON
 ```
 
 ## ⚙️ Environment Variables Setup (.env)
-Create a .env file in the root of your directory to manage credentials and configurations securely.
+Create a .env file in the root of the directory to manage credentials and configurations securely.
 
-💡 System Concept: The specific Telegram client account configured here acts as your physical "listener node." When a drop is verified, you will immediately receive a notification via your personal bot showing you exactly which account/host machine has triggered the local automation and laptop audio sequence.
+💡 System Concept: The specific Telegram client account configured here acts as the physical "listener node." When a drop is verified, you will immediately receive a notification via the personal bot showing you exactly which account/host machine has triggered the local automation and laptop audio sequence.
 
 Code snippet
 ```
@@ -111,9 +111,9 @@ Stage 2 (Amass Window): If Stage 1 yields a YES, a strict isolated 30-second con
 
 Action Suite: If verified as authentic, the program activates an asynchronous sequence:
 
-Dispatches a dedicated Telegram notification alert down to your personal chat interface, calling out the active connected listener account.
+Dispatches a dedicated Telegram notification alert down to the personal chat interface, calling out the active connected listener account.
 
-Plays a loud, distinct looping beep alarm directly on your computer speakers.
+Plays a loud, distinct looping beep alarm directly on the computer speakers.
 
 
 
@@ -168,4 +168,4 @@ python app.py
 ```
 
 ## 🧪 Testing Environment
-The framework includes simulated testing workers (manual_test_worker1, manual_test_worker2, etc.) mimicking authentic community interactions (e.g., false alarms, genuine chaos, or group panic). To safely stress-test your system pipelines without relying on active telegram drops, uncomment your target worker function inside the main() block initialization process.
+The framework includes simulated testing workers (manual_test_worker1, manual_test_worker2, etc.) mimicking authentic community interactions (e.g., false alarms, genuine chaos, or group panic). To safely stress-test the system pipelines without relying on active telegram drops, uncomment the target worker function inside the main() block initialization process.

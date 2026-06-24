@@ -15,14 +15,14 @@ from website import open_visa_portals_parallel
 from dotenv import load_dotenv
 import sys
 
-# Load credentials from your local environment setup
+# Load credentials from the local environment setup
 load_dotenv()
 
 # ==========================================
 # 1. CREDENTIALS & GLOBAL CONFIGURATION
 # ==========================================
 TELEGRAM_API_ID = int(os.getenv("TELEGRAM_API_ID", 123456))        
-TELEGRAM_API_HASH = os.getenv("TELEGRAM_API_HASH", "your_api_hash_here")    
+TELEGRAM_API_HASH = os.getenv("TELEGRAM_API_HASH", "the_api_hash_here")    
 TARGET_CHATS = ['@F1_visa_slots_india', '@F1_Visa_Slots_Group', '@f1_alarm_bot'] 
 pyautogui.FAILSAFE = True
 
@@ -149,9 +149,9 @@ async def process_message_pipeline(message_text, source="Unknown_Channel", is_fo
 async def main():
     print("💻 Desk-Mode Automated F1 Slot Tracker active.")
     
-    # On first run, this line will explicitly prompt you to type your phone number
+    # On first run, this line will explicitly prompt you to type the phone number
     # and confirmation code into the terminal. Once complete, it saves the session 
-    # to your disk so it won't ask again next time.
+    # to the disk so it won't ask again next time.
     await tg_client.start()
     
     resolved_chats = []
@@ -185,18 +185,9 @@ async def main():
 
 
 try:
-    if not os.path.exists(CONFIG_FILE):
-        config_data = {
-            "SPAM_AND_JARGON": ["scam", "payment", "agent", "dm me", "paid slot"],
-            "NEGATIONS": ["no slots", "closed", "locked", "finished", "gone"],
-            "LOOSE_TALK": ["any updates", "when will slots open", "is it open", "predict"],
-            "TEST_TRIGGER_KEYWORDS": ["slots opened", "bulk drop", "active", "open now", "go go"]
-        }
-        print("⚠️ Warning: config.json missing. Using internal default arrays.")
-    else:
-        with open(CONFIG_FILE, "r", encoding="utf-8") as f:
-            config_data = json.load(f)
-        print("⚙️ Successfully loaded keyword configurations from JSON layout.")
+    with open(CONFIG_FILE, "r", encoding="utf-8") as f:
+        config_data = json.load(f)
+    print("⚙️ Successfully loaded keyword configurations from JSON layout.")
 
     SPAM_REGEX = re.compile(r"|".join(config_data["SPAM_AND_JARGON"]), re.IGNORECASE)
     NEGATION_REGEX = re.compile(r"|".join(config_data["NEGATIONS"]), re.IGNORECASE)
