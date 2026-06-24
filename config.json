@@ -1,0 +1,7 @@
+{
+    "SPAM_AND_JARGON": ["scam", "payment", "agent", "dm me", "paid slot"],
+    "NEGATIONS": ["no slots", "closed", "locked", "finished", "gone"],
+    "LOOSE_TALK": ["any updates", "when will slots open", "is it open", "predict"],
+    "TEST_TRIGGER_KEYWORDS": ["slots opened", "bulk drop", "active", "open now", "go go"]
+
+}
